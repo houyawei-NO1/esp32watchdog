@@ -23,7 +23,7 @@ void setup() {
   // put your setup code here, to run once:
   delay(20);
   Serial.begin(115200);
-  Serial.setDebugOutput(true);
+  // Serial.setDebugOutput(true);
   Serial.println("setup");
 
 
@@ -33,7 +33,7 @@ void setup() {
 
   rtc_wdt_protect_off();
   rtc_wdt_enable();
-  
+
   rtc_wdt_feed();
   rtc_wdt_set_length_of_reset_signal(RTC_WDT_SYS_RESET_SIG, RTC_WDT_LENGTH_3_2us);
   rtc_wdt_set_stage(RTC_WDT_STAGE0, RTC_WDT_STAGE_ACTION_RESET_RTC);
@@ -77,6 +77,7 @@ void loop() {
 // Watchdog.reset();
 
 /*fourth*/
+//#include "soc/rtc_wdt.h"
   // rtc_wdt_set_length_of_reset_signal(RTC_WDT_SYS_RESET_SIG, RTC_WDT_LENGTH_3_2us);
   // rtc_wdt_set_stage(RTC_WDT_STAGE0, RTC_WDT_STAGE_ACTION_RESET_RTC);
   // rtc_wdt_set_time(RTC_WDT_STAGE0, 2000);
