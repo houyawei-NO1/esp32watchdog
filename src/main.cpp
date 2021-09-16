@@ -37,7 +37,7 @@ void setup() {
   rtc_wdt_feed();
   rtc_wdt_set_length_of_reset_signal(RTC_WDT_SYS_RESET_SIG, RTC_WDT_LENGTH_3_2us);
   rtc_wdt_set_stage(RTC_WDT_STAGE0, RTC_WDT_STAGE_ACTION_RESET_RTC);
-  rtc_wdt_set_time(RTC_WDT_STAGE0, 2000);
+  rtc_wdt_set_time(RTC_WDT_STAGE0, 120000);
   
   Serial.println(rtc_wdt_is_on());
   Serial.println(rtc_wdt_get_protect_status());
@@ -65,20 +65,20 @@ void loop() {
 // esp_task_wdt_add(NULL); //add current thread to WDT watch
 // esp_task_wdt_reset();
 
-  /*second*/
-  //enableCore0WDT();
-  //enableCore1WDT();
-  //enableLoopWDT();
+/*second*/
+//enableCore0WDT();
+//enableCore1WDT();
+//enableLoopWDT();
 
 
-  /*third*/
+/*third*/
 //https://github.com/adafruit/Adafruit_SleepyDog
 //Watchdog.enable(4000);milliseconds
 // Watchdog.reset();
 
 /*fourth*/
 //#include "soc/rtc_wdt.h"
-  // rtc_wdt_set_length_of_reset_signal(RTC_WDT_SYS_RESET_SIG, RTC_WDT_LENGTH_3_2us);
-  // rtc_wdt_set_stage(RTC_WDT_STAGE0, RTC_WDT_STAGE_ACTION_RESET_RTC);
-  // rtc_wdt_set_time(RTC_WDT_STAGE0, 2000);
-  // rtc_wdt_feed();
+// rtc_wdt_set_length_of_reset_signal(RTC_WDT_SYS_RESET_SIG, RTC_WDT_LENGTH_3_2us);
+// rtc_wdt_set_stage(RTC_WDT_STAGE0, RTC_WDT_STAGE_ACTION_RESET_RTC);
+// rtc_wdt_set_time(RTC_WDT_STAGE0, 2000);
+// rtc_wdt_feed();
