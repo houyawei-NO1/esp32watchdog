@@ -1,2 +1,2 @@
 # esp32watchdog
- 三种方式
+ 种方式
